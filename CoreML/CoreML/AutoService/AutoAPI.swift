@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Alamofire
+import AlamofireObjectMapper
 
 struct AutoAPI {
     struct APIConsole {
@@ -17,13 +18,28 @@ struct AutoAPI {
         static let apiKey   = "OY2rEn4xJ2Wo9TPDf5q8eK2ub0sJ3EHo"
     }
     
-    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 5000) {
+    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 5000, onSuccess: (([Dealer]) -> Void)?, onFailure: ((Error) -> Void)?) {
         let url = APIConsole.baseURL + "dealers"
+        let params = authenticate(params: ["latitude": coordinate.latitude,
+                                           "longitude": coordinate.longitude,
+                                           "radius": radius])
+        
+        Alamofire.request(url, parameters: params).responseArray { (response: DataResponse<[Dealer]>) in
+            switch response.result {
+            case .success(let dealers):
+                onSuccess?(dealers)
+            case .failure(let error):
+                onFailure?(error)
+            }
+        }
     }
     
     fileprivate static func authenticate(params: Parameters?) -> Parameters {
-        var authParams = ["api_key": APIConsole.apiKey]
+        if var params = params {
+            params["api_key"] = APIConsole.apiKey
+            return params
+        }
         
-        return authParams
+        return ["api_key": APIConsole.apiKey]
     }
 }
