@@ -30,9 +30,6 @@
                                 <state key="normal" title="Let's start">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="JMs-7F-MBy" kind="show" id="FEM-CT-XaG"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="uDN-E0-7oS" id="N8x-Lj-ye2"/>
+                        <segue destination="ph5-yK-H04" kind="show" identifier="showCarDetails" id="VwO-jK-NQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpe-0F-JBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,7 +107,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JMs-7F-MBy" kind="show" id="xl1-3D-yCQ"/>
+                                    <segue destination="JMs-7F-MBy" kind="show" id="uCs-WG-3eM"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85E-b8-vQk">
@@ -183,7 +181,7 @@
                                             <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="q0a-24-TYy"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="7fU-nc-xhx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -211,7 +209,4 @@
     <resources>
         <image name="car1" width="4096" height="2254"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="FEM-CT-XaG"/>
-    </inferredMetricsTieBreakers>
 </document>

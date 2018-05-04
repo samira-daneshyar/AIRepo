@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CarController: UIViewController {
+class CarController: UIViewController, ClassificationServiceDelegate {
+    
+    var capturedCIImage: CIImage?
+    
+    fileprivate let classificationService = ClassificationService()
     
     @IBOutlet weak var imageCar: UIImageView!
     @IBOutlet weak var lblModel: UILabel!
@@ -23,13 +27,40 @@ class CarController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        classificationService.delegate = self
+        classificationService.setup()
 
-        // Do any additional setup after loading the view.
+        if let ciimage = capturedCIImage {
+            imageCar.image = UIImage(ciImage: ciimage)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let ciimage = capturedCIImage else { return }
+        
+        classificationService.classify(image: ciimage)
+    }
+    
+    func classificationService(_ service: ClassificationService, didDetectCar car: String) {
+        lblModel.text = car.capitalized
+        
+        guard let location = LocationService.shared.location else { return }
+        
+        let carInfoArray = car.capitalized.split(separator: " ")
+        let make = String(carInfoArray.first ?? "")
+        let model = String(((carInfoArray.count) > 1) ? carInfoArray[1] : "")
+        
+        AutoAPI.searchVehiclesNearby(coordinate: location.coordinate, make: make, model: model, onSuccess: { (vehicles) in
+            let prices = vehicles.compactMap { $0.refPrice }
+            let averagePrice = prices.isEmpty ? 0 : prices.reduce(0) { $0 + $1 } / Double(prices.count)
+            
+            self.lblPrice.text = "\(averagePrice)"
+        }) { (error) in
+            print(error)
+        }
     }
     
 

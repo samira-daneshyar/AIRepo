@@ -11,6 +11,7 @@
 		5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D3209CD6DB00096845 /* ClassificationService.swift */; };
 		5F21C6D7209CDC0400096845 /* CarRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D6209CDC0400096845 /* CarRecognition.mlmodel */; };
 		5F21C6D9209CDD2A00096845 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D8209CDD2A00096845 /* Vehicle.swift */; };
+		5F21C6DD209CEF4B00096845 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6DC209CEF4B00096845 /* LocationService.swift */; };
 		699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */; };
 		699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8E209CBBCD0086DA41 /* Dealer.swift */; };
 		749882D6209CF26500EC2CD8 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749882D5209CF26500EC2CD8 /* MapController.swift */; };
@@ -56,6 +57,7 @@
 		5F21C6D3209CD6DB00096845 /* ClassificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 		5F21C6D6209CDC0400096845 /* CarRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CarRecognition.mlmodel; path = Convert/CarRecognition.mlmodel; sourceTree = SOURCE_ROOT; };
 		5F21C6D8209CDD2A00096845 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = AutoService/Vehicle.swift; sourceTree = "<group>"; };
+		5F21C6DC209CEF4B00096845 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		6891D39C27F12342991598AE /* Pods-CarRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarRecognition/Pods-CarRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAPI.swift; path = AutoService/AutoAPI.swift; sourceTree = "<group>"; };
 		699CAB8E209CBBCD0086DA41 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dealer.swift; path = AutoService/Dealer.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				74A54FFE209CAA7400475378 /* Info.plist */,
 				5F21C6D3209CD6DB00096845 /* ClassificationService.swift */,
 				5F21C6D1209CD6D200096845 /* CarRecognitionViewController.swift */,
+				5F21C6DC209CEF4B00096845 /* LocationService.swift */,
 			);
 			path = CarRecognition;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */,
 				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
 				699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */,
+				5F21C6DD209CEF4B00096845 /* LocationService.swift in Sources */,
 				74A27A2D209CE1DC003E6F8B /* CarController.swift in Sources */,
 				5F21C6D9209CDD2A00096845 /* Vehicle.swift in Sources */,
 				5F21C6D2209CD6D200096845 /* CarRecognitionViewController.swift in Sources */,
