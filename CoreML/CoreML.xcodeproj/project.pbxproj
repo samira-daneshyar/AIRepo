@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */; };
+		699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8E209CBBCD0086DA41 /* Dealer.swift */; };
 		74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF2209CAA7200475378 /* AppDelegate.swift */; };
 		74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF4209CAA7200475378 /* MainViewController.swift */; };
 		74A54FF8209CAA7200475378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A54FF6209CAA7200475378 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		0D5DA4E42BCCAEC34222D6F4 /* Pods-CoreMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreMLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreMLUITests/Pods-CoreMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		15937F3BAC8D6BEA861CB9C9 /* Pods_CoreMLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreMLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		560340197AAEDCEE4E63DE0E /* Pods-CoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML/Pods-CoreML.release.xcconfig"; sourceTree = "<group>"; };
+		699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAPI.swift; path = AutoService/AutoAPI.swift; sourceTree = "<group>"; };
+		699CAB8E209CBBCD0086DA41 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dealer.swift; path = AutoService/Dealer.swift; sourceTree = "<group>"; };
 		74A54FEF209CAA7200475378 /* CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A54FF2209CAA7200475378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74A54FF4209CAA7200475378 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		699CAB8C209CBBBF0086DA41 /* AutoService */ = {
+			isa = PBXGroup;
+			children = (
+				699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */,
+				699CAB8E209CBBCD0086DA41 /* Dealer.swift */,
+			);
+			name = AutoService;
+			sourceTree = "<group>";
+		};
 		74A54FE6209CAA7200475378 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +152,7 @@
 		74A54FF1209CAA7200475378 /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				699CAB8C209CBBBF0086DA41 /* AutoService */,
 				74A54FF2209CAA7200475378 /* AppDelegate.swift */,
 				74A54FF4209CAA7200475378 /* MainViewController.swift */,
 				74A54FF6209CAA7200475378 /* Main.storyboard */,
@@ -465,6 +479,8 @@
 				74A55021209CB0AE00475378 /* SecondViewController.swift in Sources */,
 				74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */,
 				74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */,
+				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
+				699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +658,10 @@
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -659,7 +678,10 @@
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -676,7 +698,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreMLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreMLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -694,7 +720,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreMLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreMLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -711,7 +741,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreMLUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreMLUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -728,7 +762,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97UR4JD24G;
 				INFOPLIST_FILE = CoreMLUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traderev.CoreMLUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
