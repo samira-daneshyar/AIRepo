@@ -17,8 +17,6 @@ class CameraController: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
     var mlModel = Inceptionv3()
-    
-    fileprivate var capturedCIImage: CIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,10 +77,9 @@ class CameraController: UIViewController {
         view.bringSubview(toFront: descriptionLabel)
     }
     
-    fileprivate let carDetailSegueIdentifier = "showCarDetails"
     fileprivate func sendToCarRecognition(ciImage: CIImage) {
-        capturedCIImage = ciImage
-        performSegue(withIdentifier: carDetailSegueIdentifier, sender: nil)
+        // TODO: perform transition
+        
     }
     
     fileprivate func checkIfObjectIsCar(classLabel: String) -> Bool {
@@ -96,17 +93,16 @@ class CameraController: UIViewController {
             classLabel.contains("van")
     }
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            let carController = segue.destination as? CarController,
-            let ciimage = capturedCIImage else { return }
-        
-        carController.imageCar.image = UIImage(ciImage: ciimage)
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }
 
 
@@ -159,8 +155,8 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
             
             DispatchQueue.main.async {
                 self.descriptionLabel.text = output.classLabel
-                if self.checkIfObjectIsCar(classLabel: output.classLabel) {
-                    self.sendToCarRecognition(ciImage: ciImage)
+                if checkIfObjectIsCar(classLabel: output.classLabel) {
+                    sendToCarRecognition(ciImage: ciImage)
                 }
             }
         }
