@@ -105,7 +105,7 @@ class CameraController: UIViewController {
             let carController = segue.destination as? CarController,
             let ciimage = capturedCIImage else { return }
         
-        carController.imageCar.image = UIImage(ciImage: ciimage)
+        carController.capturedCIImage = ciimage
     }
 }
 
