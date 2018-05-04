@@ -31,7 +31,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="umJ-2J-a4c" kind="show" id="nQt-P9-fGW"/>
+                                    <segue destination="JMs-7F-MBy" kind="show" id="FEM-CT-XaG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,7 +109,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Q0N-UE-JDm" kind="show" id="ArP-Jo-BKr"/>
+                                    <segue destination="JMs-7F-MBy" kind="show" id="xl1-3D-yCQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85E-b8-vQk">
@@ -158,52 +158,60 @@
             </objects>
             <point key="canvasLocation" x="1584.8" y="133.5832083958021"/>
         </scene>
-        <!--Dealer List Controller-->
-        <scene sceneID="1j8-zp-qZs">
+        <!--Map Controller-->
+        <scene sceneID="tjf-Te-teP">
             <objects>
-                <tableViewController id="Q0N-UE-JDm" customClass="DealerListController" customModule="CarRecognition" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xMq-7o-Hdv">
+                <viewController id="JMs-7F-MBy" customClass="MapController" customModule="CarRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugK-bW-cS4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oUy-4I-cIG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-j1-ufn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                                    </mapView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRo-Ha-dAo">
+                                        <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                        <color key="backgroundColor" red="0.02931380108" green="0.72024773320000002" blue="0.15014938459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jJw-mt-fZA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Exit">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="q0a-24-TYy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="scN-Fa-2pn" detailTextLabel="i4v-bc-TRe" style="IBUITableViewCellStyleSubtitle" id="0zM-nF-OWI">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0zM-nF-OWI" id="JhH-0Q-2Cx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scN-Fa-2pn">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i4v-bc-TRe">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Q0N-UE-JDm" id="wQ6-DY-xBr"/>
-                            <outlet property="delegate" destination="Q0N-UE-JDm" id="Mdi-px-Vqg"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vHn-mq-BJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="oUy-4I-cIG" firstAttribute="trailing" secondItem="avG-av-o7l" secondAttribute="trailing" id="8oe-ft-aSw"/>
+                            <constraint firstItem="avG-av-o7l" firstAttribute="bottom" secondItem="oUy-4I-cIG" secondAttribute="bottom" id="GCP-f1-B00"/>
+                            <constraint firstItem="oUy-4I-cIG" firstAttribute="leading" secondItem="avG-av-o7l" secondAttribute="leading" id="LT6-xj-dAR"/>
+                            <constraint firstItem="oUy-4I-cIG" firstAttribute="top" secondItem="ugK-bW-cS4" secondAttribute="top" id="tkG-KV-kG7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="avG-av-o7l"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="sRo-Ha-dAo" id="DLS-aM-WAr"/>
+                        <outlet property="mapView" destination="DM9-j1-ufn" id="XY7-Xk-Jz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5F-3J-fCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="136"/>
+            <point key="canvasLocation" x="2332" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>
         <image name="car1" width="4096" height="2254"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FEM-CT-XaG"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -155,8 +155,8 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
             
             DispatchQueue.main.async {
                 self.descriptionLabel.text = output.classLabel
-                if checkIfObjectIsCar(classLabel: output.classLabel) {
-                    sendToCarRecognition(ciImage: ciImage)
+                if self.checkIfObjectIsCar(classLabel: output.classLabel) {
+                    self.sendToCarRecognition(ciImage: ciImage)
                 }
             }
         }

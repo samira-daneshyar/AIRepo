@@ -13,9 +13,9 @@
 		5F21C6D9209CDD2A00096845 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D8209CDD2A00096845 /* Vehicle.swift */; };
 		699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */; };
 		699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8E209CBBCD0086DA41 /* Dealer.swift */; };
+		749882D6209CF26500EC2CD8 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749882D5209CF26500EC2CD8 /* MapController.swift */; };
 		74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */; };
 		74A27A2D209CE1DC003E6F8B /* CarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A2C209CE1DC003E6F8B /* CarController.swift */; };
-		74A27A31209CE23F003E6F8B /* DealerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A30209CE23F003E6F8B /* DealerListController.swift */; };
 		74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF2209CAA7200475378 /* AppDelegate.swift */; };
 		74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF4209CAA7200475378 /* MainViewController.swift */; };
 		74A54FF8209CAA7200475378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A54FF6209CAA7200475378 /* Main.storyboard */; };
@@ -59,9 +59,9 @@
 		6891D39C27F12342991598AE /* Pods-CarRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarRecognition/Pods-CarRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAPI.swift; path = AutoService/AutoAPI.swift; sourceTree = "<group>"; };
 		699CAB8E209CBBCD0086DA41 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dealer.swift; path = AutoService/Dealer.swift; sourceTree = "<group>"; };
+		749882D5209CF26500EC2CD8 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = "ML Model/Inceptionv3.mlmodel"; sourceTree = "<group>"; };
 		74A27A2C209CE1DC003E6F8B /* CarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarController.swift; sourceTree = "<group>"; };
-		74A27A30209CE23F003E6F8B /* DealerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerListController.swift; sourceTree = "<group>"; };
 		74A54FEF209CAA7200475378 /* CarRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A54FF2209CAA7200475378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74A54FF4209CAA7200475378 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -164,10 +164,10 @@
 		74A27A32209CE83D003E6F8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				74A27A30209CE23F003E6F8B /* DealerListController.swift */,
 				74A55020209CB0AE00475378 /* CameraController.swift */,
 				74A54FF4209CAA7200475378 /* MainViewController.swift */,
 				74A27A2C209CE1DC003E6F8B /* CarController.swift */,
+				749882D5209CF26500EC2CD8 /* MapController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -447,9 +447,9 @@
 			files = (
 				74A55021209CB0AE00475378 /* CameraController.swift in Sources */,
 				74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */,
-				74A27A31209CE23F003E6F8B /* DealerListController.swift in Sources */,
 				5F21C6D7209CDC0400096845 /* CarRecognition.mlmodel in Sources */,
 				74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */,
+				749882D6209CF26500EC2CD8 /* MapController.swift in Sources */,
 				74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */,
 				5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */,
 				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
