@@ -84,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="uDN-E0-7oS" id="N8x-Lj-ye2"/>
+                        <segue destination="ph5-yK-H04" kind="show" identifier="showCarDetails" id="VwO-jK-NQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpe-0F-JBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
