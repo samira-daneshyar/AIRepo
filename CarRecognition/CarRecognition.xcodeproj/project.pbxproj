@@ -14,6 +14,8 @@
 		699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */; };
 		699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8E209CBBCD0086DA41 /* Dealer.swift */; };
 		74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */; };
+		74A27A2D209CE1DC003E6F8B /* CarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A2C209CE1DC003E6F8B /* CarController.swift */; };
+		74A27A31209CE23F003E6F8B /* DealerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A30209CE23F003E6F8B /* DealerListController.swift */; };
 		74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF2209CAA7200475378 /* AppDelegate.swift */; };
 		74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A54FF4209CAA7200475378 /* MainViewController.swift */; };
 		74A54FF8209CAA7200475378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A54FF6209CAA7200475378 /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAPI.swift; path = AutoService/AutoAPI.swift; sourceTree = "<group>"; };
 		699CAB8E209CBBCD0086DA41 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dealer.swift; path = AutoService/Dealer.swift; sourceTree = "<group>"; };
 		74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = "ML Model/Inceptionv3.mlmodel"; sourceTree = "<group>"; };
+		74A27A2C209CE1DC003E6F8B /* CarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarController.swift; sourceTree = "<group>"; };
+		74A27A30209CE23F003E6F8B /* DealerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerListController.swift; sourceTree = "<group>"; };
 		74A54FEF209CAA7200475378 /* CarRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A54FF2209CAA7200475378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74A54FF4209CAA7200475378 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,17 @@
 			name = "ML Model";
 			sourceTree = "<group>";
 		};
+		74A27A32209CE83D003E6F8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74A27A30209CE23F003E6F8B /* DealerListController.swift */,
+				74A55020209CB0AE00475378 /* CameraController.swift */,
+				74A54FF4209CAA7200475378 /* MainViewController.swift */,
+				74A27A2C209CE1DC003E6F8B /* CarController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		74A54FE6209CAA7200475378 = {
 			isa = PBXGroup;
 			children = (
@@ -182,11 +197,10 @@
 		74A54FF1209CAA7200475378 /* CarRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				74A27A32209CE83D003E6F8B /* Controllers */,
 				74A27A23209CCE68003E6F8B /* ML Model */,
 				699CAB8C209CBBBF0086DA41 /* AutoService */,
 				74A54FF2209CAA7200475378 /* AppDelegate.swift */,
-				74A54FF4209CAA7200475378 /* MainViewController.swift */,
-				74A55020209CB0AE00475378 /* CameraController.swift */,
 				74A54FF6209CAA7200475378 /* Main.storyboard */,
 				74A54FF9209CAA7400475378 /* Assets.xcassets */,
 				74A54FFB209CAA7400475378 /* LaunchScreen.storyboard */,
@@ -433,12 +447,14 @@
 			files = (
 				74A55021209CB0AE00475378 /* CameraController.swift in Sources */,
 				74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */,
+				74A27A31209CE23F003E6F8B /* DealerListController.swift in Sources */,
 				5F21C6D7209CDC0400096845 /* CarRecognition.mlmodel in Sources */,
 				74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */,
 				74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */,
 				5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */,
 				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
 				699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */,
+				74A27A2D209CE1DC003E6F8B /* CarController.swift in Sources */,
 				5F21C6D9209CDD2A00096845 /* Vehicle.swift in Sources */,
 				5F21C6D2209CD6D200096845 /* CarRecognitionViewController.swift in Sources */,
 			);

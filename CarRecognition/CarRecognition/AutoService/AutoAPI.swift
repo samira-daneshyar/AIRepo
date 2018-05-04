@@ -18,7 +18,7 @@ struct AutoAPI {
         static let apiKey   = "OY2rEn4xJ2Wo9TPDf5q8eK2ub0sJ3EHo"
     }
     
-    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 5000, onSuccess: (([Dealer]) -> Void)?, onFailure: ((Error) -> Void)?) {
+    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 10000, onSuccess: (([Dealer]) -> Void)?, onFailure: ((Error) -> Void)?) {
         let url = APIConsole.baseURL + "dealers"
         let params = authenticate(params: ["latitude": coordinate.latitude,
                                            "longitude": coordinate.longitude,
@@ -34,7 +34,7 @@ struct AutoAPI {
         }
     }
     
-    static func searchVehiclesNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 5000, make: String, model: String, year: String = "2018", onSuccess:(([Vehicle]) -> Void)?, onFailure: ((Error) -> Void)?) {
+    static func searchVehiclesNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 20000, make: String, model: String, year: String = "2018", onSuccess:(([Vehicle]) -> Void)?, onFailure: ((Error) -> Void)?) {
         let url = APIConsole.baseURL + "search"
         let params = authenticate(params:["latitude": coordinate.latitude,
                                           "longitude": coordinate.longitude,
