@@ -76,6 +76,22 @@ class CameraController: UIViewController {
         descriptionLabel.text = "Looking for objects..."
         view.bringSubview(toFront: descriptionLabel)
     }
+    
+    fileprivate func sendToCarRecognition(ciImage: CIImage) {
+        // TODO: perform transition
+        
+    }
+    
+    fileprivate func checkIfObjectIsCar(classLabel: String) -> Bool {
+        return
+            classLabel.contains("limo") ||
+            classLabel.contains("taxi") ||
+            classLabel.contains("cab") ||
+            classLabel.contains("car") ||
+            classLabel.contains("truck") ||
+            classLabel.contains("convertible") ||
+            classLabel.contains("van")
+    }
 
     /*
     // MARK: - Navigation
@@ -139,6 +155,9 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
             
             DispatchQueue.main.async {
                 self.descriptionLabel.text = output.classLabel
+                if checkIfObjectIsCar(classLabel: output.classLabel) {
+                    sendToCarRecognition(ciImage: ciImage)
+                }
             }
         }
     }
