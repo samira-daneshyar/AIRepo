@@ -21,12 +21,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz9-IT-aCc">
-                                <rect key="frame" x="16" y="600" width="343" height="32"/>
+                                <rect key="frame" x="85" y="563" width="205" height="35"/>
                                 <color key="backgroundColor" red="0.029313801076727521" green="0.72024773316062174" blue="0.15014938458700622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="5Ke-7a-Y50"/>
+                                    <constraint firstAttribute="height" constant="35" id="ZK0-23-CIv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Let's start">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -37,16 +37,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Hz9-IT-aCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="N1r-K9-ywF"/>
                             <constraint firstItem="cU5-sk-Kn6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bKR-A6-KQY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hz9-IT-aCc" secondAttribute="trailing" constant="16" id="dRa-7A-923"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hz9-IT-aCc" secondAttribute="bottom" constant="69" id="eEb-ez-a4c"/>
                             <constraint firstItem="cU5-sk-Kn6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hp3-Wx-0Fb"/>
                             <constraint firstItem="cU5-sk-Kn6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jBc-Tk-q1g"/>
                             <constraint firstItem="cU5-sk-Kn6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kFD-8x-DUr"/>
-                            <constraint firstItem="Hz9-IT-aCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ozp-LU-cEQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hz9-IT-aCc" secondAttribute="bottom" constant="35" id="uri-TR-dVp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hz9-IT-aCc" secondAttribute="trailing" constant="85" id="qKg-Ea-3RL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnStart" destination="Hz9-IT-aCc" id="tUc-E8-eJb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var btnStart: UIButton! 
+    @IBOutlet weak var btnStart: UIButton! {
+        didSet {
+            btnStart.layer.cornerRadius = 10
+            btnStart.clipsToBounds = true
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
