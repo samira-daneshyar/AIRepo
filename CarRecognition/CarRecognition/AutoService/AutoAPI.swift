@@ -34,6 +34,25 @@ struct AutoAPI {
         }
     }
     
+    static func searchVehiclesNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 5000, make: String, model: String, year: String = "2018", onSuccess:(([Vehicle]) -> Void)?, onFailure: ((Error) -> Void)?) {
+        let url = APIConsole.baseURL + "search"
+        let params = authenticate(params:["latitude": coordinate.latitude,
+                                          "longitude": coordinate.longitude,
+                                          "radius": radius,
+                                          "make": make,
+                                          "model": model,
+                                          "year": year])
+        
+        Alamofire.request(url, parameters: params).responseObject { (response: DataResponse<VehicleResponse>) in
+            switch response.result {
+            case .success(let vehicleResponse):
+                onSuccess?(vehicleResponse.listings)
+            case .failure(let error):
+                onFailure?(error)
+            }
+        }
+    }
+    
     fileprivate static func authenticate(params: Parameters?) -> Parameters {
         if var params = params {
             params["api_key"] = APIConsole.apiKey

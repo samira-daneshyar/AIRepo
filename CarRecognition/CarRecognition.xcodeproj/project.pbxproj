@@ -134,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */,
+				699CAB93209CD6320086DA41 /* Vehicle.swift */,
 				699CAB8E209CBBCD0086DA41 /* Dealer.swift */,
 			);
 			name = AutoService;
@@ -215,6 +216,7 @@
 				74A54FEC209CAA7200475378 /* Frameworks */,
 				74A54FED209CAA7200475378 /* Resources */,
 				83C06207D1D2913493B33E6B /* [CP] Embed Pods Frameworks */,
+				236ACC0C8C18F71BD3CF2410 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +235,8 @@
 				74A54FFF209CAA7500475378 /* Sources */,
 				74A55000209CAA7500475378 /* Frameworks */,
 				74A55001209CAA7500475378 /* Resources */,
+				A2C39F1BEFDA7DEBF6AC1452 /* [CP] Embed Pods Frameworks */,
+				2BB2779992474D96E56DD53B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +256,8 @@
 				74A5500A209CAA7500475378 /* Sources */,
 				74A5500B209CAA7500475378 /* Frameworks */,
 				74A5500C209CAA7500475378 /* Resources */,
+				2947599132AA45C5834A93A1 /* [CP] Embed Pods Frameworks */,
+				3CAE085EFEA62C969FBF2AA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,6 +340,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		236ACC0C8C18F71BD3CF2410 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognition/Pods-CarRecognition-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2947599132AA45C5834A93A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionUITests/Pods-CarRecognitionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BB2779992474D96E56DD53B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3919CB6ED4C29D2F48244E38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +401,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CAE085EFEA62C969FBF2AA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionUITests/Pods-CarRecognitionUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		638894FCEC96BA2739FEB748 /* [CP] Check Pods Manifest.lock */ = {
@@ -410,6 +476,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2C39F1BEFDA7DEBF6AC1452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -422,6 +503,7 @@
 				74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */,
 				74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */,
 				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
+				699CAB94209CD6320086DA41 /* Vehicle.swift in Sources */,
 				699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

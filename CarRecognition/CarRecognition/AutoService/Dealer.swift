@@ -11,16 +11,16 @@ import ObjectMapper
 
 struct Dealer: Mappable {
     var id: String?
-    var name: String?
+    var sellerName: String?
     var street: String?
     var city: String?
     var state: String?
+    var country: String?
     var zip: String?
     var latitude: String?
-    var longtitude: String?
-    var phone: String?
-    var dealerType: String?
-    var rating: Double?
+    var longitude: String?
+    var sellerPhone: String?
+    var distance: Double?
     
     init?(map: Map) {
         
@@ -28,15 +28,15 @@ struct Dealer: Mappable {
     
     mutating func mapping(map: Map) {
         id          <- map["id"]
-        name        <- map["map"]
+        sellerName  <- map["seller_name"]
         street      <- map["street"]
         city        <- map["city"]
         state       <- map["state"]
+        country     <- map["country"]
         zip         <- map["zip"]
         latitude    <- map["latitude"]
-        longtitude  <- map["longtitude"]
-        phone       <- map["phone"]
-        dealerType  <- map["dealer_type"]
-        rating      <- map["rating"]
+        longitude   <- map["longitude"]
+        sellerPhone <- map["seller_phone"]
+        distance    <- map["distance"]
     }
 }
