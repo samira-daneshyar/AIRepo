@@ -1,0 +1,6 @@
+framework module Pods_CarRecognitionUITests {
+  umbrella header "Pods-CarRecognitionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

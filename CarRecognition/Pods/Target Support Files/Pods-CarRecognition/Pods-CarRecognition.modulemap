@@ -1,0 +1,6 @@
+framework module Pods_CarRecognition {
+  umbrella header "Pods-CarRecognition-umbrella.h"
+
+  export *
+  module * { export * }
+}

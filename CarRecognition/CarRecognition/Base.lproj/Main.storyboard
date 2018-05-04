@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CarRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car1" translatesAutoresizingMaskIntoConstraints="NO" id="cU5-sk-Kn6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz9-IT-aCc">
+                                <rect key="frame" x="85" y="563" width="205" height="35"/>
+                                <color key="backgroundColor" red="0.029313801076727521" green="0.72024773316062174" blue="0.15014938458700622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ZK0-23-CIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Let's start">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="umJ-2J-a4c" kind="show" id="9mp-sa-wgs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hz9-IT-aCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="N1r-K9-ywF"/>
+                            <constraint firstItem="cU5-sk-Kn6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bKR-A6-KQY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hz9-IT-aCc" secondAttribute="bottom" constant="69" id="eEb-ez-a4c"/>
+                            <constraint firstItem="cU5-sk-Kn6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hp3-Wx-0Fb"/>
+                            <constraint firstItem="cU5-sk-Kn6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jBc-Tk-q1g"/>
+                            <constraint firstItem="cU5-sk-Kn6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kFD-8x-DUr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hz9-IT-aCc" secondAttribute="trailing" constant="85" id="qKg-Ea-3RL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="Hz9-IT-aCc" id="tUc-E8-eJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Camera Controller-->
+        <scene sceneID="gKk-XY-SGW">
+            <objects>
+                <viewController id="umJ-2J-a4c" customClass="CameraController" customModule="CarRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PEi-GU-kGk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDN-E0-7oS">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cO1-DG-woA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.019133711034343089" green="0.46876058218477168" blue="0.10048152540847521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uDN-E0-7oS" firstAttribute="bottom" secondItem="2dc-1T-DeP" secondAttribute="bottom" id="GX6-ht-Q6p"/>
+                            <constraint firstItem="uDN-E0-7oS" firstAttribute="leading" secondItem="2dc-1T-DeP" secondAttribute="leading" id="sFO-PQ-gMf"/>
+                            <constraint firstItem="uDN-E0-7oS" firstAttribute="trailing" secondItem="2dc-1T-DeP" secondAttribute="trailing" id="u7C-XQ-16z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2dc-1T-DeP"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uDN-E0-7oS" id="N8x-Lj-ye2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpe-0F-JBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car1" width="4096" height="2254"/>
+    </resources>
+</document>
