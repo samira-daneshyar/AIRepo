@@ -4,16 +4,34 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - ObjectMapper (3.1.0)
+  - VisionLab (0.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
+  - VisionLab (from `https://github.com/cocoa-ai/VisionLab`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - ObjectMapper
+
+EXTERNAL SOURCES:
+  VisionLab:
+    :git: https://github.com/cocoa-ai/VisionLab
+
+CHECKOUT OPTIONS:
+  VisionLab:
+    :commit: c865a12b66ededa0bd76c23c456a172a0dd7aba4
+    :git: https://github.com/cocoa-ai/VisionLab
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  VisionLab: 6fc2dcc1f731dd21891c7bd9878a93c0526bfc91
 
-PODFILE CHECKSUM: c59f360f615ea49b1cd79c2c7b79f65fc3dfb3bd
+PODFILE CHECKSUM: d4346e8c348e07f28445235df0731be21f6c3c84
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

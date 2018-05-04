@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F21C6D2209CD6D200096845 /* CarRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D1209CD6D200096845 /* CarRecognitionViewController.swift */; };
+		5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D3209CD6DB00096845 /* ClassificationService.swift */; };
+		5F21C6D7209CDC0400096845 /* CarRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5F21C6D6209CDC0400096845 /* CarRecognition.mlmodel */; };
 		699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */; };
 		699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CAB8E209CBBCD0086DA41 /* Dealer.swift */; };
 		74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */; };
@@ -46,6 +49,9 @@
 		15937F3BAC8D6BEA861CB9C9 /* Pods_CoreMLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreMLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5B04BFB06D66EB9FB6410C /* Pods-CarRecognitionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRecognitionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA7F8FFCFDC5A25E1442CB0 /* Pods-CarRecognitionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRecognitionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F21C6D1209CD6D200096845 /* CarRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRecognitionViewController.swift; sourceTree = "<group>"; };
+		5F21C6D3209CD6DB00096845 /* ClassificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
+		5F21C6D6209CDC0400096845 /* CarRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CarRecognition.mlmodel; path = Convert/CarRecognition.mlmodel; sourceTree = SOURCE_ROOT; };
 		6891D39C27F12342991598AE /* Pods-CarRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarRecognition/Pods-CarRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAPI.swift; path = AutoService/AutoAPI.swift; sourceTree = "<group>"; };
 		699CAB8E209CBBCD0086DA41 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dealer.swift; path = AutoService/Dealer.swift; sourceTree = "<group>"; };
@@ -134,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				699CAB8D209CBBCD0086DA41 /* AutoAPI.swift */,
-				699CAB93209CD6320086DA41 /* Vehicle.swift */,
 				699CAB8E209CBBCD0086DA41 /* Dealer.swift */,
 			);
 			name = AutoService;
@@ -143,6 +148,7 @@
 		74A27A23209CCE68003E6F8B /* ML Model */ = {
 			isa = PBXGroup;
 			children = (
+				5F21C6D6209CDC0400096845 /* CarRecognition.mlmodel */,
 				74A27A2A209CD87E003E6F8B /* Inceptionv3.mlmodel */,
 			);
 			name = "ML Model";
@@ -182,6 +188,8 @@
 				74A54FF9209CAA7400475378 /* Assets.xcassets */,
 				74A54FFB209CAA7400475378 /* LaunchScreen.storyboard */,
 				74A54FFE209CAA7400475378 /* Info.plist */,
+				5F21C6D3209CD6DB00096845 /* ClassificationService.swift */,
+				5F21C6D1209CD6D200096845 /* CarRecognitionViewController.swift */,
 			);
 			path = CarRecognition;
 			sourceTree = "<group>";
@@ -216,7 +224,6 @@
 				74A54FEC209CAA7200475378 /* Frameworks */,
 				74A54FED209CAA7200475378 /* Resources */,
 				83C06207D1D2913493B33E6B /* [CP] Embed Pods Frameworks */,
-				236ACC0C8C18F71BD3CF2410 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,8 +242,6 @@
 				74A54FFF209CAA7500475378 /* Sources */,
 				74A55000209CAA7500475378 /* Frameworks */,
 				74A55001209CAA7500475378 /* Resources */,
-				A2C39F1BEFDA7DEBF6AC1452 /* [CP] Embed Pods Frameworks */,
-				2BB2779992474D96E56DD53B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,8 +261,6 @@
 				74A5500A209CAA7500475378 /* Sources */,
 				74A5500B209CAA7500475378 /* Frameworks */,
 				74A5500C209CAA7500475378 /* Resources */,
-				2947599132AA45C5834A93A1 /* [CP] Embed Pods Frameworks */,
-				3CAE085EFEA62C969FBF2AA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,51 +343,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		236ACC0C8C18F71BD3CF2410 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognition/Pods-CarRecognition-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2947599132AA45C5834A93A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionUITests/Pods-CarRecognitionUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BB2779992474D96E56DD53B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3919CB6ED4C29D2F48244E38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,21 +359,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3CAE085EFEA62C969FBF2AA7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionUITests/Pods-CarRecognitionUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		638894FCEC96BA2739FEB748 /* [CP] Check Pods Manifest.lock */ = {
@@ -446,12 +389,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/VisionLab/VisionLab.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisionLab.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -476,21 +421,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2C39F1BEFDA7DEBF6AC1452 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarRecognitionTests/Pods-CarRecognitionTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -500,11 +430,13 @@
 			files = (
 				74A55021209CB0AE00475378 /* CameraController.swift in Sources */,
 				74A27A2B209CD87E003E6F8B /* Inceptionv3.mlmodel in Sources */,
+				5F21C6D7209CDC0400096845 /* CarRecognition.mlmodel in Sources */,
 				74A54FF5209CAA7200475378 /* MainViewController.swift in Sources */,
 				74A54FF3209CAA7200475378 /* AppDelegate.swift in Sources */,
+				5F21C6D4209CD6DB00096845 /* ClassificationService.swift in Sources */,
 				699CAB90209CBBCD0086DA41 /* Dealer.swift in Sources */,
-				699CAB94209CD6320086DA41 /* Vehicle.swift in Sources */,
 				699CAB8F209CBBCD0086DA41 /* AutoAPI.swift in Sources */,
+				5F21C6D2209CD6D200096845 /* CarRecognitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
