@@ -101,11 +101,11 @@
 			children = (
 				74A54FF2209CAA7200475378 /* AppDelegate.swift */,
 				74A54FF4209CAA7200475378 /* MainViewController.swift */,
+				74A55020209CB0AE00475378 /* SecondViewController.swift */,
 				74A54FF6209CAA7200475378 /* Main.storyboard */,
 				74A54FF9209CAA7400475378 /* Assets.xcassets */,
 				74A54FFB209CAA7400475378 /* LaunchScreen.storyboard */,
 				74A54FFE209CAA7400475378 /* Info.plist */,
-				74A55020209CB0AE00475378 /* SecondViewController.swift */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
