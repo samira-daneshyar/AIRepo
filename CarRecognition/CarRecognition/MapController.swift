@@ -13,10 +13,10 @@ import CoreLocation
 class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var btnStart: UIButton!
-    let regionRadius: CLLocationDistance = 10000
+    let regionRadius: CLLocationDistance = 15000
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
-    var annotation: MKPointAnnotation?
+    var annot: MKPointAnnotation?
     //var dealer: Dealer?
     var dealers : [Dealer]?
 
@@ -35,7 +35,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        annotation = MKPointAnnotation()
+        annot = MKPointAnnotation()
         
         
         ///////
@@ -43,41 +43,33 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
             print(dealer)
             self.dealers = dealer
-            //self.tableView.reloadData()
+            for dealer in self.dealers! {
+                let annotation = MKPointAnnotation()
+                
+                if let name = dealer.sellerName {
+                    annotation.title = name
+                }
+                if let lat = dealer.latitude, let long = dealer.longitude {
+                    if let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(long) {
+                        let coordinate = CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
+                        annotation.coordinate = coordinate
+                        self.mapView.addAnnotation(annotation)
+
+                    }
+                }
+                
+            }
             
         }) { (error) in
             print(error)
         }
         centerMapOnLocation(location: location)
         let cor = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        annotation?.coordinate = cor
-        annotation?.title = "Your location"
-        self.mapView.showAnnotations([annotation!], animated: true)
-        
-        
-        if let dealers = dealers {
-            for dealer in dealers {
-                
-                if let name = dealer.sellerName {
-                    annotation!.title = name
-                }
-                if let lat = dealer.latitude, let long = dealer.longitude {
-                    if let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(long) {
-                        let coordinate = CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
-                        annotation!.coordinate = coordinate
-                        self.mapView.showAnnotations([annotation!], animated: true)
-                        self.mapView.selectAnnotation(annotation!, animated: true)
-                    }
-                }
-
-            }
-          
-        }
-        
-        
+        annot?.coordinate = cor
+        annot?.title = "Your location"
+        self.mapView.addAnnotation(annot!)
     }
-
-    
+ 
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "My Marker"
@@ -89,7 +81,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         if annotationView == nil {
             annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         }
-        annotationView?.glyphText = ""
+        //annotationView?.glyphText = ""
         annotationView?.markerTintColor = UIColor.green
         return annotationView
     }

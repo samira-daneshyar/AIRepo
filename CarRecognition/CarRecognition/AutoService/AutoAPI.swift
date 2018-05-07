@@ -18,7 +18,7 @@ struct AutoAPI {
         static let apiKey   = "OY2rEn4xJ2Wo9TPDf5q8eK2ub0sJ3EHo"
     }
     
-    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 10000, onSuccess: (([Dealer]) -> Void)?, onFailure: ((Error) -> Void)?) {
+    static func findDealersNearby(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = 100000, onSuccess: (([Dealer]) -> Void)?, onFailure: ((Error) -> Void)?) {
         let url = APIConsole.baseURL + "dealers"
         let params = authenticate(params: ["latitude": coordinate.latitude,
                                            "longitude": coordinate.longitude,
