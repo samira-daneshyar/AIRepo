@@ -39,6 +39,19 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             centerMapOnLocation(location: currentLocation!)
         }
         
+        ///////
+        guard let location = LocationService.shared.location else { return }
+        AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
+            print(dealer)
+            self.dealers = dealer
+            //self.tableView.reloadData()
+            
+        }) { (error) in
+            print(error)
+        }
+
+        
+        
         if let dealers = dealers {
             for dealer in dealers {
                 let annotation = MKPointAnnotation()
