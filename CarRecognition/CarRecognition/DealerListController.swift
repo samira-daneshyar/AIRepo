@@ -12,14 +12,13 @@ import CoreLocation
 class DealerListController: UITableViewController {
 
     var carInfo: String?
+    var dealers = [Dealer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         LocationService.shared.startMonitoringLocation()
-        
-        
-
+        LocationService.shared.delegate = self
     }
 
     // MARK: - Table view data source
@@ -29,13 +28,15 @@ class DealerListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.dealers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        cell.textLabel?.text = "test"
+        let dealer = dealers[indexPath.row]
+        // a simple label
+        cell.textLabel?.text = "\(String(describing: dealer.sellerName)) from \(String(describing: dealer.distance))km away"
 
         return cell
     }
@@ -47,6 +48,9 @@ extension DealerListController: LocationServiceDelegate {
         
         AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
             print(dealer)
+            self.dealers = dealer
+            self.tableView.reloadData()
+            
         }) { (error) in
             print(error)
         }
