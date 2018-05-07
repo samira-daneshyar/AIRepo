@@ -17,9 +17,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
     var annot: MKPointAnnotation?
-    //var dealer: Dealer?
     var dealers : [Dealer]?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +34,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         annot = MKPointAnnotation()
-        
-        
-        ///////
+
         guard let location = LocationService.shared.location else { return }
         AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
             print(dealer)
