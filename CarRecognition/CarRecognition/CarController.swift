@@ -58,7 +58,7 @@ class CarController: UIViewController, ClassificationServiceDelegate {
             let prices = vehicles.compactMap { $0.refPrice }
             let averagePrice = prices.isEmpty ? 0 : prices.reduce(0) { $0 + $1 } / Double(prices.count)
             
-            self.lblPrice.text = "\(averagePrice)"
+            self.lblPrice.text = "Estimate: \(averagePrice)"
         }) { (error) in
             print(error)
         }
