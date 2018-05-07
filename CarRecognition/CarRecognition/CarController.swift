@@ -21,6 +21,7 @@ class CarController: UIViewController, ClassificationServiceDelegate {
         didSet {
             btnDealers.layer.cornerRadius = 10
             btnDealers.clipsToBounds = true
+            btnDealers.addTarget(self, action: #selector(toMapController), for: .touchUpInside)
         }
     }
     
@@ -61,6 +62,10 @@ class CarController: UIViewController, ClassificationServiceDelegate {
         }) { (error) in
             print(error)
         }
+    }
+    
+    @objc func toMapController() {
+        performSegue(withIdentifier: "toMapController", sender: nil)
     }
     
 

@@ -107,7 +107,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JMs-7F-MBy" kind="show" id="uCs-WG-3eM"/>
+                                    <segue destination="JMs-7F-MBy" kind="show" identifier="toMapController" id="uCs-WG-3eM"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85E-b8-vQk">

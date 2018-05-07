@@ -17,8 +17,18 @@ class DealerListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LocationService.shared.startMonitoringLocation()
-        LocationService.shared.delegate = self
+//        LocationService.shared.startMonitoringLocation()
+//        LocationService.shared.delegate = self
+        
+        guard let location = LocationService.shared.location else { return }
+        AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
+            print(dealer)
+            self.dealers = dealer
+            self.tableView.reloadData()
+            
+        }) { (error) in
+            print(error)
+        }
     }
 
     // MARK: - Table view data source
@@ -42,17 +52,10 @@ class DealerListController: UITableViewController {
     }
 }
 
-extension DealerListController: LocationServiceDelegate {
-    func didFinishGettingUserLocation(location: CLLocation) {
-        print(location)
-        
-        AutoAPI.findDealersNearby(coordinate: location.coordinate, onSuccess: { (dealer) in
-            print(dealer)
-            self.dealers = dealer
-            self.tableView.reloadData()
-            
-        }) { (error) in
-            print(error)
-        }
-    }
-}
+//extension DealerListController: LocationServiceDelegate {
+//    func didFinishGettingUserLocation(location: CLLocation) {
+//        print(location)
+//
+//
+//    }
+//}
