@@ -40,19 +40,22 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         }
         
         if let dealers = dealers {
-            let dealer = dealers[0]
-            let annotation = MKPointAnnotation()
-            if let name = dealer.sellerName {
-                annotation.title = name
-            }
-            if let lat = dealer.latitude, let long = dealer.longitude {
-                if let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(long) {
-                    let coordinate = CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
-                    annotation.coordinate = coordinate
-                    self.mapView.showAnnotations([annotation], animated: true)
-                    self.mapView.selectAnnotation(annotation, animated: true)
+            for dealer in dealers {
+                let annotation = MKPointAnnotation()
+                if let name = dealer.sellerName {
+                    annotation.title = name
                 }
+                if let lat = dealer.latitude, let long = dealer.longitude {
+                    if let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(long) {
+                        let coordinate = CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
+                        annotation.coordinate = coordinate
+                        self.mapView.showAnnotations([annotation], animated: true)
+                        self.mapView.selectAnnotation(annotation, animated: true)
+                    }
+                }
+
             }
+          
         }
         
         
