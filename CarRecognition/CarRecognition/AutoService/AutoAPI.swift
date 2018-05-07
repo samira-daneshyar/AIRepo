@@ -24,10 +24,10 @@ struct AutoAPI {
                                            "longitude": coordinate.longitude,
                                            "radius": radius])
         
-        Alamofire.request(url, parameters: params).responseArray { (response: DataResponse<[Dealer]>) in
+        Alamofire.request(url, parameters: params).responseObject { (response: DataResponse<DealerResponse>) in
             switch response.result {
-            case .success(let dealers):
-                onSuccess?(dealers)
+            case .success(let dealerResponse):
+                onSuccess?(dealerResponse.dealers)
             case .failure(let error):
                 onFailure?(error)
             }

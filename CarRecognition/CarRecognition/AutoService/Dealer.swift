@@ -9,6 +9,20 @@
 import Foundation
 import ObjectMapper
 
+struct DealerResponse: Mappable {
+    var numFound: Int?
+    var dealers: [Dealer] = []
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        numFound <- map["num_found"]
+        dealers  <- map["dealers"]
+    }
+}
+
 struct Dealer: Mappable {
     var id: String?
     var sellerName: String?
