@@ -13,9 +13,10 @@ import CoreLocation
 class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var btnStart: UIButton!
-    let regionRadius: CLLocationDistance = 5000
+    let regionRadius: CLLocationDistance = 10000
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
+    var annotation: MKPointAnnotation?
     //var dealer: Dealer?
     var dealers : [Dealer]?
 
@@ -34,10 +35,8 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        annotation = MKPointAnnotation()
         
-        if let _ = currentLocation {
-            centerMapOnLocation(location: currentLocation!)
-        }
         
         ///////
         guard let location = LocationService.shared.location else { return }
@@ -49,21 +48,25 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         }) { (error) in
             print(error)
         }
-
+        centerMapOnLocation(location: location)
+        let cor = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        annotation?.coordinate = cor
+        annotation?.title = "Your location"
+        self.mapView.showAnnotations([annotation!], animated: true)
         
         
         if let dealers = dealers {
             for dealer in dealers {
-                let annotation = MKPointAnnotation()
+                
                 if let name = dealer.sellerName {
-                    annotation.title = name
+                    annotation!.title = name
                 }
                 if let lat = dealer.latitude, let long = dealer.longitude {
                     if let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(long) {
                         let coordinate = CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
-                        annotation.coordinate = coordinate
-                        self.mapView.showAnnotations([annotation], animated: true)
-                        self.mapView.selectAnnotation(annotation, animated: true)
+                        annotation!.coordinate = coordinate
+                        self.mapView.showAnnotations([annotation!], animated: true)
+                        self.mapView.selectAnnotation(annotation!, animated: true)
                     }
                 }
 
